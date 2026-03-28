@@ -4,862 +4,227 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>정총무 — 프랜차이즈 원스톱 솔루션</title>
+<meta name="description" content="가맹 영업 · 점포 개발 · 인테리어 시공. 프랜차이즈 확장에 필요한 모든 것을 정총무가 원스톱으로 책임집니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nippert-oss.github.io/service">
+<meta property="og:title" content="정총무 — 프랜차이즈 원스톱 솔루션">
+<meta property="og:description" content="가맹 영업 · 점포 개발 · 인테리어 시공. 바쁜 대표님, 가맹 확장은 저희가 합니다.">
+<meta property="og:image" content="https://nippert-oss.github.io/service/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nippert-oss.github.io/service/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 :root {
-  --white: #ffffff;
-  --bg: #f8f7f4;
-  --black: #111111;
-  --accent: #E84E1B;
-  --accent-soft: #fff0eb;
-  --gray: #777777;
-  --text: #1a1a1a;
-  --border: #e2e2e2;
+  --white:#ffffff; --bg:#f8f7f4; --black:#111111;
+  --accent:#E84E1B; --accent-soft:#fff0eb;
+  --gray:#777777; --text:#1a1a1a; --border:#e2e2e2;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background: var(--white);
-  color: var(--text);
-  overflow-x: hidden;
-  word-break: keep-all;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;word-break:keep-all;}
 
-/* ─── NAV ─── */
-nav {
-  position: fixed;
-  top:0; left:0; right:0;
-  z-index: 200;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 24px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-logo {
-  font-family: 'Noto Serif KR', serif;
-  font-weight: 900;
-  font-size: 18px;
-  color: var(--black);
-  letter-spacing: -0.02em;
-}
-.nav-logo span { color: var(--accent); }
-.nav-cta {
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 10px 18px;
-  border-radius: 6px;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Noto Serif KR',serif;font-weight:900;font-size:18px;color:var(--black);letter-spacing:-0.02em;}
+.nav-logo span{color:var(--accent);}
+.nav-cta{background:var(--accent);color:white;text-decoration:none;font-size:13px;font-weight:700;padding:10px 18px;border-radius:6px;}
 
-/* ─── HERO ─── */
-.hero {
-  padding: 90px 24px 64px;
-  background: var(--white);
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--accent-soft);
-  border: 1px solid rgba(232,78,27,0.2);
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 6px 14px;
-  border-radius: 100px;
-  margin-bottom: 24px;
-}
-.hero-badge::before {
-  content: '';
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-.hero-title {
-  font-family: 'Noto Serif KR', serif;
-  font-weight: 900;
-  font-size: clamp(32px, 8vw, 56px);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  color: var(--black);
-  margin-bottom: 20px;
-}
-.hero-title .accent { color: var(--accent); }
-.hero-sub {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.9;
-  color: var(--gray);
-  margin-bottom: 32px;
-}
-.hero-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.btn-primary {
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 14px 28px;
-  border-radius: 6px;
-  display: inline-block;
-}
-.btn-secondary {
-  color: var(--black);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 14px 20px;
-  border: 1.5px solid var(--border);
-  border-radius: 6px;
-  display: inline-block;
-}
+/* HERO */
+.hero{padding:80px 24px 56px;background:var(--white);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);border:1px solid rgba(232,78,27,0.2);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.1em;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.hero-title{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,7vw,56px);line-height:1.2;letter-spacing:-0.03em;color:var(--black);margin-bottom:18px;}
+.hero-title .accent{color:var(--accent);}
+.hero-sub{font-size:15px;font-weight:300;line-height:1.9;color:var(--gray);margin-bottom:28px;}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.btn-primary{background:var(--accent);color:white;text-decoration:none;font-size:14px;font-weight:700;padding:14px 28px;border-radius:6px;display:inline-block;}
+.btn-secondary{color:var(--black);text-decoration:none;font-size:14px;font-weight:500;padding:14px 20px;border:1.5px solid var(--border);border-radius:6px;display:inline-block;}
 
-/* pain cards */
-.pain-stack {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.pain-card {
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: 12px;
-  padding: 18px 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  border-left: 3px solid var(--accent);
-}
-.pain-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
-.pain-card h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--black);
-  margin-bottom: 4px;
-  line-height: 1.5;
-}
-.pain-card p {
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 1.7;
-}
+/* PAIN */
+.pain-stack{margin-top:36px;display:flex;flex-direction:column;gap:12px;}
+.pain-card{background:var(--white);border:1.5px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px;}
+.pain-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.pain-card h4{font-size:13px;font-weight:700;color:var(--black);margin-bottom:4px;line-height:1.5;}
+.pain-card p{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7;}
 
-/* ─── SECTION COMMON ─── */
-section { padding: 72px 24px; }
+/* SECTION */
+section{padding:64px 24px;}
+.section-label{font-size:11px;font-weight:700;letter-spacing:0.2em;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.section-label::after{content:'';width:32px;height:1.5px;background:var(--accent);display:block;flex-shrink:0;}
+.section-title{font-family:'Noto Serif KR',serif;font-size:clamp(24px,5.5vw,40px);font-weight:900;line-height:1.25;letter-spacing:-0.02em;color:var(--black);}
+.section-desc{margin-top:12px;font-size:14px;font-weight:300;line-height:1.9;color:var(--gray);}
 
-.section-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-label::after {
-  content: '';
-  width: 32px;
-  height: 1.5px;
-  background: var(--accent);
-  display: block;
-  flex-shrink: 0;
-}
-.section-title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(24px, 6vw, 40px);
-  font-weight: 900;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  color: var(--black);
-}
-.section-desc {
-  margin-top: 14px;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.9;
-  color: var(--gray);
-}
+/* TRUST */
+.trust-section{background:var(--bg);}
+.trust-grid{margin-top:36px;display:flex;flex-direction:column;gap:12px;}
+.trust-card{background:var(--white);border-radius:12px;padding:24px 22px;border:1.5px solid var(--border);}
+.trust-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--accent);line-height:1;margin-bottom:6px;}
+.trust-num-text{font-family:'Noto Sans KR',sans-serif;font-weight:900;font-size:32px;color:var(--accent);line-height:1;margin-bottom:6px;letter-spacing:-0.02em;}
+.trust-card h3{font-size:15px;font-weight:700;color:var(--black);margin-bottom:6px;}
+.trust-card p{font-size:13px;font-weight:300;color:var(--gray);line-height:1.8;}
 
-/* ─── TRUST NUMBERS ─── */
-.trust-section { background: var(--bg); }
-.trust-grid {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.trust-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 28px 24px;
-  border: 1.5px solid var(--border);
-}
-.trust-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 52px;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.trust-card h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--black);
-  margin-bottom: 8px;
-}
-.trust-card p {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 1.8;
-}
+/* FEAR */
+.fear-section{background:var(--black);color:white;}
+.fear-section .section-label{color:var(--accent);}
+.fear-section .section-title{color:white;}
+.fear-section .section-desc{color:rgba(255,255,255,0.5);}
+.fear-list{margin-top:32px;display:flex;flex-direction:column;gap:12px;}
+.fear-item{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid rgba(255,255,255,0.08);border-radius:10px;background:rgba(255,255,255,0.03);}
+.fear-icon{width:38px;height:38px;background:rgba(232,78,27,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.fear-item h4{font-size:13px;font-weight:700;color:white;margin-bottom:5px;line-height:1.5;}
+.fear-item p{font-size:12px;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.8;}
+.fear-answer{margin-top:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:28px 22px;}
+.answer-badge{display:inline-block;background:var(--accent);color:white;font-size:10px;font-weight:700;letter-spacing:0.15em;padding:5px 12px;border-radius:4px;margin-bottom:14px;}
+.fear-answer h3{font-family:'Noto Serif KR',serif;font-size:20px;font-weight:900;color:white;line-height:1.4;letter-spacing:-0.02em;margin-bottom:18px;}
+.answer-points{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.answer-points li{display:flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;}
+.answer-points li::before{content:'✓';color:var(--accent);font-weight:700;font-size:13px;flex-shrink:0;}
 
-/* ─── FEAR SECTION ─── */
-.fear-section {
-  background: var(--black);
-  color: white;
-}
-.fear-section .section-label { color: var(--accent); }
-.fear-section .section-title { color: white; }
-.fear-section .section-desc { color: rgba(255,255,255,0.5); }
+/* SERVICES */
+.services-section{background:var(--white);}
+.services-list{margin-top:36px;}
+.service-row{padding:24px 0;border-top:1px solid var(--border);}
+.service-row:last-child{border-bottom:1px solid var(--border);}
+.svc-mob-head{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.svc-mob-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--accent);line-height:1;flex-shrink:0;}
+.svc-mob-name{font-size:15px;font-weight:700;color:var(--black);letter-spacing:-0.01em;line-height:1.3;}
+.svc-desk-num{display:none;}
+.svc-desk-title{display:none;}
+.svc-desk-price{display:none;}
+.service-desc{font-size:13px;font-weight:300;color:var(--gray);line-height:1.8;margin-bottom:12px;}
+.service-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.stag{font-size:10px;font-weight:500;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:4px;}
+.svc-price-badge{display:inline-flex;align-items:baseline;gap:6px;background:var(--bg);border-radius:8px;padding:8px 14px;}
+.price-val{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--black);line-height:1;}
+.price-unit{font-size:11px;color:var(--gray);}
 
-.fear-list {
-  margin-top: 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.fear-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 20px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  background: rgba(255,255,255,0.03);
-}
-.fear-icon {
-  width: 40px; height: 40px;
-  background: rgba(232,78,27,0.15);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.fear-item h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
-.fear-item p {
-  font-size: 12px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.45);
-  line-height: 1.8;
-}
+/* PROCESS */
+.process-section{background:var(--bg);}
+.process-steps{margin-top:36px;display:flex;flex-direction:column;}
+.proc-step{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--border);}
+.proc-step:first-child{border-top:1px solid var(--border);}
+.proc-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.step-num-label{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:0.1em;margin-bottom:8px;}
+.proc-dot{width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.proc-step h4{font-size:14px;font-weight:700;color:var(--black);margin-bottom:3px;margin-top:8px;}
+.proc-step p{font-size:12px;font-weight:300;color:var(--gray);line-height:1.7;}
 
-.fear-answer {
-  margin-top: 28px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 16px;
-  padding: 32px 24px;
-}
-.answer-badge {
-  display: inline-block;
-  background: var(--accent);
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  padding: 5px 12px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-}
-.fear-answer h3 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 22px;
-  font-weight: 900;
-  color: white;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-.answer-points {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.answer-points li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-}
-.answer-points li::before {
-  content: '✓';
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 13px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
+/* REFERENCES */
+.ref-section{background:var(--white);}
+.ref-meta{margin-bottom:28px;}
+.ref-count{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--accent);line-height:1;margin-top:10px;}
+.ref-count-label{font-size:12px;font-weight:300;color:var(--gray);margin-top:2px;}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border);}
+.brand-cell{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 8px;display:flex;align-items:center;justify-content:center;text-align:center;transition:background 0.15s;}
+.brand-cell:hover{background:var(--accent);}
+.brand-cell:hover .brand-name{color:white;}
+.brand-name{font-size:11px;font-weight:700;color:var(--text);line-height:1.3;}
+.ref-note{margin-top:24px;font-size:12px;font-weight:300;color:var(--gray);text-align:center;line-height:1.8;}
+.ref-note strong{color:var(--accent);font-weight:700;}
 
-/* ─── SERVICES ─── */
-.services-section { background: var(--white); }
-.services-list {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-}
-.service-row {
-  padding: 28px 0;
-  border-top: 1px solid var(--border);
-}
-.service-row:last-child { border-bottom: 1px solid var(--border); }
-.service-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-}
-.service-idx {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 30px;
-  color: var(--accent);
-  line-height: 1;
-  flex-shrink: 0;
-}
-.service-info h3 {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--black);
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-}
-.service-info p {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 1.8;
-  margin-bottom: 12px;
-}
-.service-tags {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-.stag {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 4px 10px;
-  border-radius: 4px;
-}
-.service-price {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  background: var(--bg);
-  border-radius: 8px;
-  padding: 10px 16px;
-}
-.price-val {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 22px;
-  color: var(--black);
-  line-height: 1;
-}
-.price-unit {
-  font-size: 11px;
-  color: var(--gray);
-}
+/* CTA */
+.cta-section{background:var(--accent);padding:72px 24px;text-align:center;}
+.cta-section .section-label{color:rgba(255,255,255,0.65);justify-content:center;}
+.cta-section .section-label::after{background:rgba(255,255,255,0.4);}
+.cta-title{font-family:'Noto Serif KR',serif;font-size:clamp(26px,6vw,48px);font-weight:900;color:white;line-height:1.25;letter-spacing:-0.02em;margin-top:12px;}
+.cta-sub{margin-top:14px;font-size:14px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.9;}
+.cta-buttons{margin-top:32px;display:flex;flex-direction:column;gap:10px;align-items:center;}
+.btn-white{background:white;color:var(--accent);text-decoration:none;font-size:15px;font-weight:700;padding:15px 36px;border-radius:8px;display:inline-block;width:100%;max-width:300px;text-align:center;}
+.btn-kakao{background:transparent;color:white;text-decoration:none;font-size:15px;font-weight:500;padding:15px 36px;border-radius:8px;border:2px solid rgba(255,255,255,0.5);display:inline-block;width:100%;max-width:300px;text-align:center;}
 
-/* ─── PROCESS ─── */
-.process-section { background: var(--bg); }
-.process-steps {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.proc-step {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-.proc-step:first-child { border-top: 1px solid var(--border); }
-.proc-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  flex-shrink: 0;
-}
-.proc-dot {
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.proc-step h4 {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--black);
-  margin-bottom: 4px;
-  margin-top: 10px;
-}
-.proc-step p {
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--gray);
-  line-height: 1.7;
-}
-.step-num-label {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  margin-top: 6px;
-}
+/* FOOTER */
+footer{background:var(--black);padding:32px 24px;}
+.footer-logo{font-family:'Noto Serif KR',serif;font-size:16px;font-weight:900;color:white;margin-bottom:10px;}
+.footer-logo span{color:var(--accent);}
+.footer-info{font-size:11px;color:rgba(255,255,255,0.3);line-height:1.9;}
 
-/* ─── REFERENCES ─── */
-.ref-section { background: var(--white); }
-.ref-header {
-  margin-bottom: 36px;
-}
-.ref-count {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 64px;
-  color: var(--accent);
-  line-height: 1;
-  margin-top: 12px;
-}
-.ref-count-label {
-  font-size: 13px;
-  font-weight: 300;
-  color: var(--gray);
-  margin-top: 2px;
-}
-
-/* brand grid — 3열 고정, 스크롤 없음 */
-.brands-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--border);
-  border-left: 1px solid var(--border);
-}
-.brand-cell {
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 14px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: background 0.15s;
-}
-.brand-cell:hover { background: var(--accent); }
-.brand-cell:hover .brand-name { color: white; }
-.brand-name {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.3;
-  word-break: keep-all;
-}
-
-.ref-note {
-  margin-top: 28px;
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--gray);
-  text-align: center;
-  line-height: 1.8;
-}
-.ref-note strong { color: var(--accent); font-weight: 700; }
-
-/* ─── CTA ─── */
-.cta-section {
-  background: var(--accent);
-  padding: 72px 24px;
-  text-align: center;
-}
-.cta-section .section-label {
-  color: rgba(255,255,255,0.65);
-  justify-content: center;
-}
-.cta-section .section-label::after { background: rgba(255,255,255,0.4); }
-.cta-title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(26px, 7vw, 48px);
-  font-weight: 900;
-  color: white;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin-top: 14px;
-}
-.cta-sub {
-  margin-top: 14px;
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.9;
-}
-.cta-buttons {
-  margin-top: 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-.btn-white {
-  background: white;
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 16px 40px;
-  border-radius: 8px;
-  display: inline-block;
-  width: 100%;
-  max-width: 320px;
-  text-align: center;
-}
-.btn-white-outline {
-  background: transparent;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 15px 40px;
-  border: 2px solid rgba(255,255,255,0.5);
-  border-radius: 8px;
-  display: inline-block;
-  width: 100%;
-  max-width: 320px;
-  text-align: center;
-}
-
-/* ─── CONTACT FORM ─── */
-.contact-form {
-  margin-top: 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-}
-.phone-input-wrap {
-  display: flex;
-  width: 100%;
-  max-width: 420px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-.phone-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 16px 20px;
-  font-size: 16px;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
-  color: #111;
-  background: transparent;
-}
-.phone-input::placeholder { color: #aaa; font-weight: 300; }
-.phone-submit {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 16px 24px;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: 'Noto Sans KR', sans-serif;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-.phone-submit:hover { background: #c73d12; }
-.form-result {
-  font-size: 13px;
-  color: rgba(255,255,255,0.85);
-  min-height: 20px;
-  font-weight: 300;
-}
-.contact-tel {
-  margin-top: 8px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-  font-weight: 300;
-}
-.contact-tel a {
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-/* ─── FOOTER ─── */
-footer {
-  background: var(--black);
-  padding: 36px 24px;
-}
-.footer-logo {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 16px;
-  font-weight: 900;
-  color: white;
-  margin-bottom: 12px;
-}
-.footer-logo span { color: var(--accent); }
-.footer-info {
-  font-size: 11px;
-  color: rgba(255,255,255,0.3);
-  line-height: 1.9;
-}
-
-/* ─── DESKTOP (768px+) ─── */
-@media (min-width: 768px) {
-  nav { padding: 0 48px; }
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    padding: 100px 48px 80px;
-    min-height: 100vh;
-  }
-  .pain-stack { margin-top: 0; }
-  section { padding: 100px 48px; }
-  .trust-grid {
-    flex-direction: row;
-    gap: 16px;
-  }
-  .trust-card { flex: 1; }
-  .fear-list { gap: 16px; }
-  .fear-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-    margin-top: 48px;
-  }
-  .fear-list { margin-top: 0; }
-  .fear-answer { margin-top: 0; }
-  .service-row {
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    gap: 28px;
-    align-items: start;
-    padding: 36px 0;
-  }
-  .service-header { display: none; }
-  .service-idx-desktop {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    color: var(--accent);
-    line-height: 1;
-    padding-top: 4px;
-  }
-  .service-price-desktop {
-    text-align: right;
-    padding-top: 4px;
-  }
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
-    position: relative;
-  }
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 24px;
-    left: 48px; right: 48px;
-    height: 2px;
-    background: linear-gradient(to right, var(--accent), rgba(232,78,27,0.15));
-    z-index: 0;
-  }
-  .proc-step {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-bottom: none;
-    border-top: none;
-    padding: 0 16px;
-  }
-  .proc-step:first-child { border-top: none; }
-  .proc-dot { position: relative; z-index: 1; margin-bottom: 16px; }
-  .proc-step h4 { margin-top: 0; }
-  .step-num-label { order: -1; margin-top: 0; margin-bottom: 8px; }
-  .brands-grid { grid-template-columns: repeat(5, 1fr); }
-  .brand-cell { padding: 18px 12px; }
-  .brand-name { font-size: 13px; }
-  .cta-buttons { flex-direction: row; justify-content: center; }
-  .btn-white, .btn-white-outline { width: auto; }
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-logo { margin-bottom: 0; }
-  .footer-info { text-align: right; }
+/* ══ DESKTOP ≥768px ══ */
+@media(min-width:768px){
+  nav{padding:0 60px;}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:100px 60px 80px;min-height:100vh;}
+  .pain-stack{margin-top:0;}
+  section{padding:100px 60px;}
+  .trust-grid{flex-direction:row;gap:20px;}
+  .trust-card{flex:1;}
+  .fear-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px;}
+  .fear-list{margin-top:0;}
+  .fear-answer{margin-top:0;}
+  .service-row{display:grid;grid-template-columns:64px 1fr auto;gap:32px;align-items:start;padding:36px 0;}
+  .svc-mob-head{display:none;}
+  .svc-desk-num{display:block;font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--accent);line-height:1;padding-top:2px;}
+  .svc-desk-title{display:block;font-size:18px;font-weight:700;color:var(--black);letter-spacing:-0.01em;margin-bottom:8px;}
+  .svc-desk-price{display:block;text-align:right;padding-top:2px;white-space:nowrap;}
+  .svc-desk-price .price-val{font-size:24px;}
+  .svc-desk-price .price-unit{display:block;margin-top:4px;}
+  .svc-price-badge{display:none;}
+  .process-steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin-top:48px;}
+  .process-steps::before{content:'';position:absolute;top:30px;left:44px;right:44px;height:2px;background:linear-gradient(to right,var(--accent),rgba(232,78,27,0.15));z-index:0;}
+  .proc-step{flex-direction:column;align-items:center;text-align:center;border:none;padding:0 12px;gap:0;}
+  .proc-step:first-child{border-top:none;}
+  .proc-left{align-items:center;}
+  .proc-dot{position:relative;z-index:1;margin-bottom:14px;}
+  .proc-step h4{margin-top:0;}
+  .brands-grid{grid-template-columns:repeat(5,1fr);}
+  .brand-cell{padding:16px 10px;}
+  .brand-name{font-size:13px;}
+  .cta-buttons{flex-direction:row;justify-content:center;}
+  .btn-white,.btn-kakao{width:auto;max-width:none;}
+  footer{display:flex;justify-content:space-between;align-items:center;padding:36px 60px;}
+  .footer-logo{margin-bottom:0;}
+  .footer-info{text-align:right;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">정총무<span>.</span></div>
   <a href="#contact" class="nav-cta">미팅 신청하기</a>
 </nav>
 
-<!-- ─── HERO ─── -->
 <div class="hero">
   <div class="hero-left">
     <div class="hero-badge">프랜차이즈 원스톱 솔루션</div>
-    <h1 class="hero-title">
-      바쁜 대표님,<br>
-      가맹 확장은<br>
-      <span class="accent">저희가 합니다.</span>
-    </h1>
-    <p class="hero-sub">
-      영업 대행부터 점포 개발, 인테리어 시공까지.<br>
-      믿고 맡길 파트너를 찾고 계셨다면,<br>
-      정총무가 처음부터 끝까지 책임집니다.
-    </p>
+    <h1 class="hero-title">바쁜 대표님,<br>가맹 확장은<br><span class="accent">저희가 합니다.</span></h1>
+    <p class="hero-sub">영업 대행부터 점포 개발, 인테리어 시공까지.<br>믿고 맡길 파트너를 찾고 계셨다면,<br>정총무가 처음부터 끝까지 책임집니다.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">무료 상담 신청</a>
       <a href="#services" class="btn-secondary">서비스 보기 →</a>
     </div>
   </div>
-
   <div class="pain-stack">
-    <div class="pain-card">
-      <div class="pain-icon">😤</div>
-      <div>
-        <h4>"상담 받느라 바쁜데 점포까지 어떻게 알아봐요"</h4>
-        <p>소규모에서 중규모로 넘어가는 시기, 인원은 없고 할 일은 많습니다.</p>
-      </div>
-    </div>
-    <div class="pain-card">
-      <div class="pain-icon">🤷</div>
-      <div>
-        <h4>"점주한테 자리 알아보라 했더니 모른다고 해요"</h4>
-        <p>예비 점주도 상권을 모릅니다. 본사가 나서야 하는데 시간이 없죠.</p>
-      </div>
-    </div>
-    <div class="pain-card">
-      <div class="pain-icon">😰</div>
-      <div>
-        <h4>"믿고 맡길 만한 곳이 없어요"</h4>
-        <p>영업, 중개, 시공 각각 다른 업체에 맡기면 결국 책임지는 곳이 없습니다.</p>
-      </div>
-    </div>
-    <div class="pain-card">
-      <div class="pain-icon">⚡</div>
-      <div>
-        <h4>"한 번에 다 해주는 곳은 없을까요?"</h4>
-        <p>정총무가 이 물음에 답합니다. 유치부터 오픈까지 원스톱으로.</p>
-      </div>
-    </div>
+    <div class="pain-card"><div class="pain-icon">😤</div><div><h4>"상담 받느라 바쁜데 점포까지 어떻게 알아봐요"</h4><p>소규모에서 중규모로 넘어가는 시기, 인원은 없고 할 일은 많습니다.</p></div></div>
+    <div class="pain-card"><div class="pain-icon">🤷</div><div><h4>"점주한테 자리 알아보라 했더니 모른다고 해요"</h4><p>예비 점주도 상권을 모릅니다. 본사가 나서야 하는데 시간이 없죠.</p></div></div>
+    <div class="pain-card"><div class="pain-icon">😰</div><div><h4>"믿고 맡길 만한 곳이 없어요"</h4><p>영업, 중개, 시공 각각 다른 업체에 맡기면 결국 책임지는 곳이 없습니다.</p></div></div>
+    <div class="pain-card"><div class="pain-icon">⚡</div><div><h4>"한 번에 다 해주는 곳은 없을까요?"</h4><p>정총무가 이 물음에 답합니다. 유치부터 오픈까지 원스톱으로.</p></div></div>
   </div>
 </div>
 
-<!-- ─── TRUST NUMBERS ─── -->
 <section class="trust-section" id="about">
   <div class="section-label">WHY JEONGTONGMU</div>
   <h2 class="section-title">숫자로 보는 정총무</h2>
   <p class="section-desc">말이 아닌 실적으로 증명합니다.</p>
   <div class="trust-grid">
-    <div class="trust-card">
-      <div class="trust-num">40+</div>
-      <h3>브랜드 파트너십</h3>
-      <p>다양한 업종의 프랜차이즈 브랜드와 영업·점포·시공을 직접 진행해왔습니다.</p>
-    </div>
-    <div class="trust-card">
-      <div class="trust-num">3IN1</div>
-      <h3>원스톱 실행</h3>
-      <p>가맹 영업·점포개발·인테리어 시공. 세 가지를 한 팀이 끝까지 책임집니다.</p>
-    </div>
-    <div class="trust-card">
-      <div class="trust-num">직영</div>
-      <h3>자체 시공팀 보유</h3>
-      <p>외주 없이 자체 시공팀이 직접 현장을 맡습니다. 일정도 품질도 흔들리지 않습니다.</p>
-    </div>
+    <div class="trust-card"><div class="trust-num">40+</div><h3>브랜드 파트너십</h3><p>다양한 업종의 프랜차이즈 브랜드와 영업·점포·시공을 직접 진행해왔습니다.</p></div>
+    <div class="trust-card"><div class="trust-num">3IN1</div><h3>원스톱 실행</h3><p>가맹 영업·점포개발·인테리어 시공. 세 가지를 한 팀이 끝까지 책임집니다.</p></div>
+    <div class="trust-card"><div class="trust-num-text">직영</div><h3>자체 시공팀 보유</h3><p>외주 없이 자체 시공팀이 직접 현장을 맡습니다. 일정도 품질도 흔들리지 않습니다.</p></div>
   </div>
 </section>
 
-<!-- ─── FEAR / TRUST ─── -->
 <section class="fear-section">
   <div class="section-label">TRUST</div>
   <h2 class="section-title">대표님이 무서워하는 것,<br>저희도 압니다.</h2>
   <p class="section-desc">직접 프랜차이즈를 운영해봤기 때문에, 본사의 고민을 이해합니다.</p>
-
-  <div class="fear-grid">
+  <div class="fear-inner">
     <div class="fear-list">
-      <div class="fear-item">
-        <div class="fear-icon">💸</div>
-        <div>
-          <h4>오픈비용만 받고 사라지는 영업대행사</h4>
-          <p>계약금만 받고 결과도 없이 연락이 끊깁니다. 성과 기반이 아니면 의미가 없습니다.</p>
-        </div>
-      </div>
-      <div class="fear-item">
-        <div class="fear-icon">🗺️</div>
-        <div>
-          <h4>좋은 자리가 아니어도 감언이설로 계약시키는 중개</h4>
-          <p>수수료만 바라보는 중개는 점포 실패의 원인이 됩니다. 브랜드 이미지가 타격을 입습니다.</p>
-        </div>
-      </div>
-      <div class="fear-item">
-        <div class="fear-icon">🏚️</div>
-        <div>
-          <h4>인테리어 품질로 브랜드가 망가지는 공포</h4>
-          <p>저가 외주 시공이 브랜드 아이덴티티를 무너뜨립니다. 첫 점포가 기준이 됩니다.</p>
-        </div>
-      </div>
+      <div class="fear-item"><div class="fear-icon">💸</div><div><h4>오픈비용만 받고 사라지는 영업대행사</h4><p>계약금만 받고 결과도 없이 연락이 끊깁니다. 성과 기반이 아니면 의미가 없습니다.</p></div></div>
+      <div class="fear-item"><div class="fear-icon">🗺️</div><div><h4>좋은 자리가 아니어도 감언이설로 계약시키는 중개</h4><p>수수료만 바라보는 중개는 점포 실패의 원인입니다. 브랜드 이미지가 타격을 입습니다.</p></div></div>
+      <div class="fear-item"><div class="fear-icon">🏚️</div><div><h4>인테리어 품질로 브랜드가 망가지는 공포</h4><p>저가 외주 시공이 브랜드 아이덴티티를 무너뜨립니다. 첫 점포가 기준이 됩니다.</p></div></div>
     </div>
-
     <div class="fear-answer">
       <div class="answer-badge">정총무의 답</div>
       <h3>우리도 직접<br>운영해봤습니다.</h3>
@@ -874,251 +239,132 @@ footer {
   </div>
 </section>
 
-<!-- ─── SERVICES ─── -->
 <section class="services-section" id="services">
   <div class="section-label">SERVICES</div>
   <h2 class="section-title">정총무의 3가지 서비스</h2>
   <p class="section-desc">하나만 맡겨도, 세 가지를 묶어 맡겨도 좋습니다. 어디서 시작해도 연결됩니다.</p>
-
   <div class="services-list">
-    <!-- 01 -->
     <div class="service-row">
-      <!-- 모바일용 헤더 -->
-      <div class="service-header">
-        <div class="service-idx">01</div>
-        <div class="service-info"><h3>프랜차이즈 가맹 영업 대행</h3></div>
+      <div class="svc-mob-head"><span class="svc-mob-num">01</span><span class="svc-mob-name">프랜차이즈 가맹 영업 대행</span></div>
+      <div class="svc-desk-num">01</div>
+      <div>
+        <div class="svc-desk-title">프랜차이즈 가맹 영업 대행</div>
+        <p class="service-desc">예비 창업자 발굴부터 가맹 상담, 계약 성사까지 전 과정을 대행합니다. 대표님이 상담에 매달리지 않아도 가맹점이 늘어납니다.</p>
+        <div class="service-tags"><span class="stag">가맹점 유치</span><span class="stag">상담 대행</span><span class="stag">계약 지원</span><span class="stag">성과 기반</span></div>
+        <div class="svc-price-badge"><span class="price-val">300–500만</span><span class="price-unit">건당 성사 기준</span></div>
       </div>
-      <!-- 데스크탑용 번호 (CSS로 show/hide) -->
-      <div class="service-idx-desktop" style="display:none">01</div>
-      <div class="service-info">
-        <h3 class="desktop-only" style="display:none; font-size:19px; font-weight:700; margin-bottom:8px; letter-spacing:-0.01em;">프랜차이즈 가맹 영업 대행</h3>
-        <p>예비 창업자 발굴부터 가맹 상담, 계약 성사까지 전 과정을 대행합니다. 대표님이 상담에 매달리지 않아도 가맹점이 늘어납니다.</p>
-        <div class="service-tags">
-          <span class="stag">가맹점 유치</span>
-          <span class="stag">상담 대행</span>
-          <span class="stag">계약 지원</span>
-          <span class="stag">성과 기반</span>
-        </div>
-        <div class="service-price">
-          <div class="price-val">300–500만</div>
-          <div class="price-unit">건당 성사 기준</div>
-        </div>
-      </div>
-      <div class="service-price-desktop" style="display:none">
-        <div class="price-val" style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black);line-height:1;">300–500만</div>
-        <div class="price-unit" style="font-size:11px;color:var(--gray);margin-top:4px;">건당 성사 기준</div>
-      </div>
+      <div class="svc-desk-price"><div class="price-val">300–500만</div><div class="price-unit">건당 성사 기준</div></div>
     </div>
-
-    <!-- 02 -->
     <div class="service-row">
-      <div class="service-header">
-        <div class="service-idx">02</div>
-        <div class="service-info"><h3>프랜차이즈 점포 개발</h3></div>
+      <div class="svc-mob-head"><span class="svc-mob-num">02</span><span class="svc-mob-name">프랜차이즈 점포 개발</span></div>
+      <div class="svc-desk-num">02</div>
+      <div>
+        <div class="svc-desk-title">프랜차이즈 점포 개발</div>
+        <p class="service-desc">상권 분석, 후보 점포 발굴, 임대 협상, 계약 체결까지. 공인 중개사 자격을 보유해 법적 계약 책임도 직접 집니다.</p>
+        <div class="service-tags"><span class="stag">상권 분석</span><span class="stag">점포 소개</span><span class="stag">중개 계약</span><span class="stag">중개사 자격 보유</span></div>
+        <div class="svc-price-badge"><span class="price-val">200–300만</span><span class="price-unit">중개수수료 외 별도</span></div>
       </div>
-      <div class="service-idx-desktop" style="display:none">02</div>
-      <div class="service-info">
-        <h3 class="desktop-only" style="display:none; font-size:19px; font-weight:700; margin-bottom:8px; letter-spacing:-0.01em;">프랜차이즈 점포 개발</h3>
-        <p>상권 분석, 후보 점포 발굴, 임대 협상, 계약 체결까지. 공인 중개사 자격을 보유해 법적 계약 책임도 직접 집니다.</p>
-        <div class="service-tags">
-          <span class="stag">상권 분석</span>
-          <span class="stag">점포 소개</span>
-          <span class="stag">중개 계약</span>
-          <span class="stag">중개사 자격 보유</span>
-        </div>
-        <div class="service-price">
-          <div class="price-val">200–300만</div>
-          <div class="price-unit">중개수수료 외 별도</div>
-        </div>
-      </div>
-      <div class="service-price-desktop" style="display:none">
-        <div class="price-val" style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black);line-height:1;">200–300만</div>
-        <div class="price-unit" style="font-size:11px;color:var(--gray);margin-top:4px;">중개수수료 외 별도</div>
-      </div>
+      <div class="svc-desk-price"><div class="price-val">200–300만</div><div class="price-unit">중개수수료 외 별도</div></div>
     </div>
-
-    <!-- 03 -->
     <div class="service-row">
-      <div class="service-header">
-        <div class="service-idx">03</div>
-        <div class="service-info"><h3>프랜차이즈 인테리어 시공</h3></div>
+      <div class="svc-mob-head"><span class="svc-mob-num">03</span><span class="svc-mob-name">프랜차이즈 인테리어 시공</span></div>
+      <div class="svc-desk-num">03</div>
+      <div>
+        <div class="svc-desk-title">프랜차이즈 인테리어 시공</div>
+        <p class="service-desc">자체 시공팀이 직접 현장을 책임집니다. 외주 없이 진행하기 때문에 브랜드 기준 그대로 일정과 품질을 보장합니다.</p>
+        <div class="service-tags"><span class="stag">자체 시공팀</span><span class="stag">브랜드 CI 준수</span><span class="stag">일정 보장</span><span class="stag">품질 책임</span></div>
+        <div class="svc-price-badge"><span class="price-val">현장 견적</span><span class="price-unit">규모에 따라</span></div>
       </div>
-      <div class="service-idx-desktop" style="display:none">03</div>
-      <div class="service-info">
-        <h3 class="desktop-only" style="display:none; font-size:19px; font-weight:700; margin-bottom:8px; letter-spacing:-0.01em;">프랜차이즈 인테리어 시공</h3>
-        <p>자체 시공팀이 직접 현장을 책임집니다. 외주 없이 진행하기 때문에 브랜드 기준 그대로, 일정과 품질을 보장합니다.</p>
-        <div class="service-tags">
-          <span class="stag">자체 시공팀</span>
-          <span class="stag">브랜드 CI 준수</span>
-          <span class="stag">일정 보장</span>
-          <span class="stag">품질 책임</span>
-        </div>
-        <div class="service-price">
-          <div class="price-val">현장 견적</div>
-          <div class="price-unit">규모에 따라</div>
-        </div>
-      </div>
-      <div class="service-price-desktop" style="display:none">
-        <div class="price-val" style="font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black);line-height:1;">현장 견적</div>
-        <div class="price-unit" style="font-size:11px;color:var(--gray);margin-top:4px;">규모에 따라</div>
-      </div>
+      <div class="svc-desk-price"><div class="price-val">현장 견적</div><div class="price-unit">규모에 따라</div></div>
     </div>
   </div>
 </section>
 
-<!-- ─── PROCESS ─── -->
 <section class="process-section">
   <div class="section-label">HOW IT WORKS</div>
   <h2 class="section-title">오픈까지 5단계,<br>정총무가 함께합니다</h2>
   <div class="process-steps">
-    <div class="proc-step">
-      <div class="proc-left">
-        <div class="step-num-label">STEP 01</div>
-        <div class="proc-dot">📋</div>
-      </div>
-      <div>
-        <h4>미팅 &amp; 브리핑</h4>
-        <p>브랜드 상황과 목표를 파악합니다</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-left">
-        <div class="step-num-label">STEP 02</div>
-        <div class="proc-dot">📢</div>
-      </div>
-      <div>
-        <h4>가맹 영업</h4>
-        <p>예비 점주 발굴 및 상담 진행</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-left">
-        <div class="step-num-label">STEP 03</div>
-        <div class="proc-dot">🏙️</div>
-      </div>
-      <div>
-        <h4>점포 발굴</h4>
-        <p>상권 분석 후 최적 점포 소개</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-left">
-        <div class="step-num-label">STEP 04</div>
-        <div class="proc-dot">🔨</div>
-      </div>
-      <div>
-        <h4>인테리어 시공</h4>
-        <p>자체팀이 브랜드 기준으로 완성</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-left">
-        <div class="step-num-label">STEP 05</div>
-        <div class="proc-dot">🎉</div>
-      </div>
-      <div>
-        <h4>오픈 완료</h4>
-        <p>가맹점 오픈까지 책임집니다</p>
-      </div>
-    </div>
+    <div class="proc-step"><div class="proc-left"><div class="step-num-label">STEP 01</div><div class="proc-dot">📋</div></div><div><h4>미팅 &amp; 브리핑</h4><p>브랜드 상황과 목표를 파악합니다</p></div></div>
+    <div class="proc-step"><div class="proc-left"><div class="step-num-label">STEP 02</div><div class="proc-dot">📢</div></div><div><h4>가맹 영업</h4><p>예비 점주 발굴 및 상담 진행</p></div></div>
+    <div class="proc-step"><div class="proc-left"><div class="step-num-label">STEP 03</div><div class="proc-dot">🏙️</div></div><div><h4>점포 발굴</h4><p>상권 분석 후 최적 점포 소개</p></div></div>
+    <div class="proc-step"><div class="proc-left"><div class="step-num-label">STEP 04</div><div class="proc-dot">🔨</div></div><div><h4>인테리어 시공</h4><p>자체팀이 브랜드 기준으로 완성</p></div></div>
+    <div class="proc-step"><div class="proc-left"><div class="step-num-label">STEP 05</div><div class="proc-dot">🎉</div></div><div><h4>오픈 완료</h4><p>가맹점 오픈까지 책임집니다</p></div></div>
   </div>
 </section>
 
-<!-- ─── REFERENCES ─── -->
 <section class="ref-section" id="references">
-  <div class="ref-header">
+  <div class="ref-meta">
     <div class="section-label">REFERENCES</div>
     <h2 class="section-title">함께한 브랜드들</h2>
     <p class="section-desc">업종 불문, 다양한 프랜차이즈와 함께해왔습니다.<br>상세 포트폴리오는 미팅 시 제공해 드립니다.</p>
     <div class="ref-count">40+</div>
     <div class="ref-count-label">파트너 브랜드</div>
   </div>
-
-  <div class="brands-grid" id="brandGrid"></div>
-
-  <p class="ref-note">
-    <strong>시공 사례 · 계약 실적 · 상권 분석 보고서</strong>는 미팅 시 직접 공유해 드립니다
-  </p>
+  <div class="brands-grid">
+    <div class="brand-cell"><span class="brand-name">그레이피플</span></div>
+    <div class="brand-cell"><span class="brand-name">바나타이거</span></div>
+    <div class="brand-cell"><span class="brand-name">셀렉토</span></div>
+    <div class="brand-cell"><span class="brand-name">밥풀릭스</span></div>
+    <div class="brand-cell"><span class="brand-name">맛찜</span></div>
+    <div class="brand-cell"><span class="brand-name">옐레드</span></div>
+    <div class="brand-cell"><span class="brand-name">짱탁구장</span></div>
+    <div class="brand-cell"><span class="brand-name">우규</span></div>
+    <div class="brand-cell"><span class="brand-name">아담만두</span></div>
+    <div class="brand-cell"><span class="brand-name">명성가</span></div>
+    <div class="brand-cell"><span class="brand-name">맛찜랭킹</span></div>
+    <div class="brand-cell"><span class="brand-name">소낙스</span></div>
+    <div class="brand-cell"><span class="brand-name">팔각도</span></div>
+    <div class="brand-cell"><span class="brand-name">호텔런드리</span></div>
+    <div class="brand-cell"><span class="brand-name">명백집</span></div>
+    <div class="brand-cell"><span class="brand-name">뭉텅</span></div>
+    <div class="brand-cell"><span class="brand-name">닭장맥주</span></div>
+    <div class="brand-cell"><span class="brand-name">손정보쌈</span></div>
+    <div class="brand-cell"><span class="brand-name">프레드피자</span></div>
+    <div class="brand-cell"><span class="brand-name">미아리우동집</span></div>
+    <div class="brand-cell"><span class="brand-name">깻떡</span></div>
+    <div class="brand-cell"><span class="brand-name">금싸빠</span></div>
+    <div class="brand-cell"><span class="brand-name">압구정화로구이</span></div>
+    <div class="brand-cell"><span class="brand-name">로칼</span></div>
+    <div class="brand-cell"><span class="brand-name">와요커피</span></div>
+    <div class="brand-cell"><span class="brand-name">메카폰</span></div>
+    <div class="brand-cell"><span class="brand-name">싸다김밥</span></div>
+    <div class="brand-cell"><span class="brand-name">온미정</span></div>
+    <div class="brand-cell"><span class="brand-name">한사리감자탕</span></div>
+    <div class="brand-cell"><span class="brand-name">마니달오</span></div>
+    <div class="brand-cell"><span class="brand-name">에이플러스짐</span></div>
+    <div class="brand-cell"><span class="brand-name">육오랑</span></div>
+    <div class="brand-cell"><span class="brand-name">원카츠</span></div>
+    <div class="brand-cell"><span class="brand-name">다이닝숲</span></div>
+    <div class="brand-cell"><span class="brand-name">조마루감자탕</span></div>
+    <div class="brand-cell"><span class="brand-name">연남동미용실</span></div>
+    <div class="brand-cell"><span class="brand-name">조교동감자탕</span></div>
+    <div class="brand-cell"><span class="brand-name">홍이집</span></div>
+    <div class="brand-cell"><span class="brand-name">팔도밥상</span></div>
+    <div class="brand-cell"><span class="brand-name">얌샘김밥</span></div>
+  </div>
+  <p class="ref-note"><strong>시공 사례 · 계약 실적 · 상권 분석 보고서</strong>는 미팅 시 직접 공유해 드립니다</p>
 </section>
 
-<!-- ─── CTA ─── -->
 <section class="cta-section" id="contact">
   <div class="section-label">GET STARTED</div>
   <h2 class="cta-title">지금 바로<br>이야기 들려주세요.</h2>
-  <p class="cta-sub">
-    부담 없는 첫 미팅부터 시작합니다.<br>
-    브랜드 상황만 알려주시면 방법을 찾아드립니다.
-  </p>
-  <div class="contact-form">
-    <div class="phone-input-wrap">
-      <input class="phone-input" id="phoneInput" type="tel" placeholder="연락처를 입력해 주세요 (예: 010-1234-5678)" maxlength="13">
-      <button class="phone-submit" onclick="submitPhone()">상담 신청</button>
-    </div>
-    <div class="form-result" id="formResult"></div>
-    <div class="contact-tel">직접 전화하기 <a href="tel:01024610912">010-2461-0912</a></div>
+  <p class="cta-sub">부담 없는 첫 미팅부터 시작합니다.<br>브랜드 상황만 알려주시면 방법을 찾아드립니다.</p>
+  <div class="cta-buttons">
+    <a href="tel:01024610912" class="btn-white">📞 전화 상담</a>
+    <a href="#" class="btn-kakao">💬 카카오톡 문의</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">정총무<span>.</span></div>
-  <div class="footer-info">경기도 남양주시 다산동 6063 6층 · 대표자 이웅민<br>사업자등록번호 803-09-03113 · nippert@jungchongmoo.com</div>
+  <div class="footer-info">경기도 남양주시 6063 6층 · 대표자 이웅민<br>사업자등록번호 803-09-03113</div>
 </footer>
 
 <script>
-// ── 상담 신청 (Google Sheets 연동) ──
-const WEBHOOK = 'https://script.google.com/macros/s/AKfycbwsp0OQyxdviG9TRBXFlb4SC8xUEwwKwVwVj25KcUeMmGAwaYPfe5obkhrWhkaduUaP/exec';
-
-function submitPhone() {
-  const input = document.getElementById('phoneInput');
-  const result = document.getElementById('formResult');
-  const phone = input.value.trim();
-  if (!phone || phone.replace(/[^0-9]/g,'').length < 9) {
-    result.textContent = '연락처를 정확히 입력해 주세요.';
-    result.style.color = 'rgba(255,200,180,0.95)';
-    return;
-  }
-  const btn = document.querySelector('.phone-submit');
-  btn.textContent = '전송 중...';
-  btn.disabled = true;
-  fetch(WEBHOOK, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({phone: phone})
-  }).then(() => {
-    result.textContent = '✓ 접수 완료! 빠르게 연락드리겠습니다.';
-    result.style.color = 'rgba(255,255,255,0.95)';
-    input.value = '';
-    btn.textContent = '상담 신청';
-    btn.disabled = false;
-  }).catch(() => {
-    result.textContent = '오류가 발생했습니다. 직접 전화 주세요.';
-    result.style.color = 'rgba(255,200,180,0.95)';
-    btn.textContent = '상담 신청';
-    btn.disabled = false;
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  // 엔터키 지원
-  const input = document.getElementById('phoneInput');
-  if (input) {
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') submitPhone(); });
-    // 자동 하이픈
-    input.addEventListener('input', () => {
-      let v = input.value.replace(/[^0-9]/g,'');
-      if (v.length <= 3) input.value = v;
-      else if (v.length <= 7) input.value = v.slice(0,3)+'-'+v.slice(3);
-      else input.value = v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7,11);
-    });
-  }
-  // 스무스 스크롤
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
   });
 });
 </script>
