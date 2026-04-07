@@ -367,6 +367,41 @@ footer{background:var(--black);padding:32px 24px;}
   <div class="footer-logo">정총무<span>.</span></div>
   <div class="footer-info">경기도 남양주시 6063 6층 · 대표자 이웅민<br>사업자등록번호 803-09-03113</div>
 </footer>
+<!-- 카카오 플로팅 버튼 -->
+<style>
+.float-kakao {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 999;
+  background: #FEE500;
+  color: #3C1E1E;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.float-kakao svg { fill: #3C1E1E; flex-shrink: 0; }
+.float-kakao:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.22); }
+@media(max-width:768px){
+  .float-kakao span { display: none; }
+  .float-kakao { padding: 14px; border-radius: 50%; }
+}
+</style>
+<a href="https://open.kakao.com/o/syDEmKni" target="_blank" class="float-kakao">
+  <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 3C6.477 3 2 6.582 2 11c0 2.731 1.566 5.123 3.95 6.616L4.9 21l4.08-2.04C9.59 19.32 10.78 19.5 12 19.5c5.523 0 10-3.582 10-8S17.523 3 12 3z"/>
+  </svg>
+  <span>카카오 문의</span>
+</a>
+
 
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
@@ -378,3 +413,4 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 </script>
 </body>
 </html>
+<!-- 이 줄은 무시 -->
